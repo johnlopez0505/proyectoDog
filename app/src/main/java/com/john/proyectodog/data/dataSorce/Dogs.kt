@@ -2,10 +2,10 @@ package com.john.proyectodog.data.dataSorce
 
 object Dogs {
     val dogs : List<Pair<String, String>> = listOf(
-        Pair( "raza1", "https://images.dog.ceo/breeds/bulldog-boston/n02096585_10823.jpg" ),
-        Pair( "raza2","https://images.dog.ceo/breeds/mountain-swiss/n02107574_97.jpg" ),
-        Pair( "raza3","https://images.dog.ceo/breeds/terrier-wheaten/n02098105_1009.jpg" ),
-        Pair( "raza4", "https://images.dog.ceo/breeds/entlebucher/n02108000_99.jpg" ),
-        Pair( "raza5","https://images.dog.ceo/breeds/mastiff-english/3.jpg" )
+        Pair( "basenji", "https://images.dog.ceo/breeds/basenji/n02110806_5744.jpg" ),
+        Pair( "pastor aleman","https://images.dog.ceo/breeds/germanshepherd/n02106662_6966.jpg" ),
+        Pair( "san bernardo","https://images.dog.ceo/breeds/stbernard/n02109525_6693.jpg" ),
+        Pair( "pincher", "https://images.dog.ceo/breeds/pinscher-miniature/n02107312_5077.jpg" ),
+        Pair( "collie border","https://images.dog.ceo/breeds/collie-border/n02106166_3850.jpg" )
     )
 }
