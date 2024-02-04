@@ -250,4 +250,20 @@ A continuación, se enumeran y explican las dependencias clave utilizadas en el 
 
 ## Imagenes de ejecución
 
+![img](./imagenes/img.png)
+
+![img_1](./imagenes/img_1.png)
+
+![img_2](./imagenes/img_2.png)
+
+![img_3](./imagenes/img_3.png)
+
+![img_4](./imagenes/img_4.png)
+
+![img_5](./imagenes/img_5.png)
+
+[REPOSITORIOhttps://github.com/johnlopez0505/proyectoDog/tree/dev](https://github.com/johnlopez0505/proyectoDog/tree/dev)
+
+
+
 
