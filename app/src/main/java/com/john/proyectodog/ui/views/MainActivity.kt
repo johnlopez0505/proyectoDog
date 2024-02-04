@@ -1,4 +1,4 @@
-package com.john.proyectodog
+package com.john.proyectodog.ui.views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +11,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.john.proyectodog.databinding.ActivityMainBinding
 import com.john.proyectodog.ui.adapter.DogAdapter
 import com.john.proyectodog.ui.modelView.DogViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener{
     lateinit var binding: ActivityMainBinding
     lateinit var adapter: DogAdapter
@@ -53,7 +55,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener{
             this
         ) { visible ->
             binding.progressBar.isVisible = visible
-            Log.i("TAG-DOGS", "ProgressBar esta $visible")
+            //Log.i("TAG-DOGS", "ProgressBar esta $visible")
         }
         /*
         Observamos un cambio en el search. De la misma forma, será notificado y actualizará la UI.
@@ -63,6 +65,12 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener{
         ) { bread ->
             dogViewModel.listForBreed(bread) //cambiamos los datos.
             hideKeyBoard() //Este método oculta el teclado.
+        }
+
+        dogViewModel.text.observe(
+            this
+        ){it ->
+            binding.textDog.text = it
         }
     }
 

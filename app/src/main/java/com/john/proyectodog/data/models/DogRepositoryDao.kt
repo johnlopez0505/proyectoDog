@@ -1,15 +1,11 @@
 package com.john.proyectodog.data.models
 
 import com.john.proyectodog.data.service.DogService
+import javax.inject.Inject
 
-class DogRepositoryDao : DogRepositoryInterfaceDao {
-
-    companion object {
-        val myDogRepositoryDao: DogRepositoryDao by lazy{ //lazy delega a un primer acceso
-            DogRepositoryDao() //Me creo sólo este objeto una vez.
-        }
-    }
-
+class DogRepositoryDao @Inject constructor(
+        private val service: DogService
+    ) : DogRepositoryInterfaceDao {
 
     /*
     Método que a partir de los datos nativos, devuelve la lista
@@ -18,7 +14,7 @@ class DogRepositoryDao : DogRepositoryInterfaceDao {
     override fun getDogs(): List<Dog> {
         var mutableDogs : MutableList <Dog> = mutableListOf()
 
-        val dataSource = DogService.service.getDogs()
+        val dataSource = service.getDogs()
         dataSource .forEach{ dog->
             mutableDogs .add(Dog(dog. first, dog.second))
         }
@@ -29,7 +25,7 @@ class DogRepositoryDao : DogRepositoryInterfaceDao {
     override fun getBreedDogs(breed: String): List<Dog> {
         var mutableDogs : MutableList <Dog> = mutableListOf()
 
-        val dataSource = DogService.service.getBreedDogs(breed)
+        val dataSource = service.getBreedDogs(breed)
         dataSource .forEach{ dog->
             mutableDogs .add(Dog(dog. first, dog.second))
         }

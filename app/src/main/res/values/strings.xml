@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">proyectoDog</string>
+    <string name="perro_no_encontrado_en_la_base_de_datos">Perro no encontrado en la base de datos</string>
 </resources>

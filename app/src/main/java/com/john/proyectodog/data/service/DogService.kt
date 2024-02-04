@@ -1,14 +1,9 @@
 package com.john.proyectodog.data.service
 
 import com.john.proyectodog.data.dataSorce.Dogs
+import javax.inject.Inject
+class DogService @Inject constructor(): DogServiceInterface {
 
-class DogService : DogServiceInterface {
-
-    companion object {
-        val service: DogService by lazy{ //lazy delega a un primer acceso
-            DogService() //Me creo sólo este objeto una vez.
-        }
-    }
     //Método que accede a la BBDD y devuelve todos los datos
     override fun getDogs(): List<Pair<String, String>> {
         return Dogs.dogs
